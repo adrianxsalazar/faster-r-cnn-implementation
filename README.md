@@ -1,6 +1,11 @@
 # faster-r-cnn-implementation
 Faster R-CNN implementation
 
+<p class="aligncenter">
+<img src="https://github.com/adrianxsalazar/faster-r-cnn-implementation/blob/master/readme_images/detection_sample.png" alt="detection sample">
+</p>
+
+
 ```
 project
 │   README.md
@@ -21,7 +26,6 @@ project
 ```
 
 
-<img src="https://github.com/adrianxsalazar/faster-r-cnn-implementation/blob/master/readme_images/detection_sample.png" alt="detection sample">
 
 ```
 
