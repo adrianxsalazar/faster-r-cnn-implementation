@@ -17,11 +17,11 @@ project
 │   │   file012.txt
 │   │
 │   └───subfolder1
-│       │   file111.txt
+│       │   file111.txt       #this folder
 │       │   file112.txt
 │       │   ...
 |       └───subfolder1
-|           |   file.py 
+|           |   file.py
 │   
 └───f
     │   file021.txt
