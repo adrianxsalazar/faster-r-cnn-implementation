@@ -12,20 +12,30 @@ Faster R-CNN implementation
 project
 │   README.md    
 │
-└───code
-│   │   file011.txt
-│   │   file012.txt
-│   │
-│   └───subfolder1
-│       │   file111.txt       #this folder
-│       │   file112.txt
+└───code   
+│   │   ...
+│   └───faster_rcnn
+│       │   faster_rcnn.py                        #this folder
+│       │   testing_faster_rcnn.py
 │       │   ...
-|       └───subfolder1
-|           |   file.py
+|       └───tools
+|           |   decision_anchors.py
+|           |   plot_results_faster_rcnn.py
 │   
-└───f
-    │   file021.txt
-    │   file022.txt
+└───datasets
+|   │   ...
+|   └───dataset_A
+|       |   json_test_set.json
+|       |   json_train_set.json
+|       |   json_val_set.json
+|       └───all
+|           | img.png
+|   
+└───saved_models
+|   |
+|   └───faster_cnn
+|       |
+|       └───dataset_A
 ```
 
 
