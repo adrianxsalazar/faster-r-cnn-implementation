@@ -6,12 +6,13 @@ Faster R-CNN implementation
 </p>
 
 
+
+
 ```
 project
-│   README.md
-│   file001.txt    
+│   README.md    
 │
-└───folder1
+└───code
 │   │   file011.txt
 │   │   file012.txt
 │   │
@@ -19,13 +20,16 @@ project
 │       │   file111.txt
 │       │   file112.txt
 │       │   ...
+|       └───subfolder1
+|           |   file.py 
 │   
-└───folder2
+└───f
     │   file021.txt
     │   file022.txt
 ```
 
 
+Following this directory structure, running this faster r-cnn would be as ea
 
 ```
 
