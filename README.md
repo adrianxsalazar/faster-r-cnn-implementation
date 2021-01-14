@@ -2,14 +2,17 @@
 Faster R-CNN implementation
 
 
-.
-├── build                   # Compiled files (alternatively `dist`)
-├── docs                    # Documentation files (alternatively `doc`)
-├── src                     # Source files (alternatively `lib` or `app`)
-├── test                    # Automated tests (alternatively `spec` or `tests`)
-├── tools                   # Tools and utilities
-├── LICENSE
-└── README.md
+var routes = (
+  <Route name="App">
+    <Route name="Admin">
+      <Route name="Users"/>
+      <Route name="Reports"/>
+    </Route>
+    <Route name="Course">
+      <Route name="Assignments"/>
+    </Route>
+  </Route>
+);
 
 
 ![detection sample](https://github.com/adrianxsalazar/faster-r-cnn-implementation/blob/master/readme_images/detection_sample.png)
