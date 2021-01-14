@@ -1,0 +1,32 @@
+{
+  "annotations": [
+    {
+      "area": 1.0,
+      "bbox": [
+        104,
+        320,
+        115,
+        136
+      ],
+      "category_id": 1,
+      "id": 1,
+      "image_id": 3,
+      "iscrowd": 0
+    }
+    ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "category 1",
+      "supercategory": "category 1"
+    }
+  ],
+  "images": [
+    {
+      "file_name": "image_3.png",
+      "height": 720,
+      "id": 3,
+      "width": 1280
+    }
+  ]
+}
