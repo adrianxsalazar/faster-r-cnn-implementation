@@ -15,7 +15,7 @@ What can you do with this implementation?
  <li>Test your model with just a few commands.</li>
 </ul>
 
-Before explaining how to use this implementation, I should point to the detectron2 framework. Detectron2 is a fantastic tool for object detection and segmentation.  You can get more information about this framework in the official <a href="https://github.com/facebookresearch/detectron2">repository</a> . If you want to know more about faster R-CNN, I recommend to start with the original article: "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks".
+Before explaining how to use this implementation, I should point to the detectron2 framework. Detectron2 is a fantastic tool for object detection and segmentation.  You can get more information about this framework in the official <a href="https://github.com/facebookresearch/detectron2">repository.</a> If you want to know more about faster R-CNN, I recommend to start with the original article: "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks".
 
 
 First, you need to follow the given directory structure. You can always change the code if you do not want to follow this structure. I will explain later which lines of code you need to change.
@@ -54,10 +54,56 @@ project
 ```
 
 
-Following this directory structure, running this faster r-cnn would be as ea
+Following this directory structure, running this faster r-cnn would be as eaFirst, you need to follow the given directory structure. You can always change the code if you do not want to follow this structure. I will explain later which lines of code you need to change.
+
+
+
+Once you have this structure, place the training, testing, and validation coco JSON files in the datasets/<name_of_your_dataset>/ directory. Then you only have to rename them as "json_train_set.json", "json_test_set.json", and "json_val_set.json". Then, copy all the dataset images under the directory datasets/<name_of_your_dataset>/all/. Now, everything is ready to train our Faster R-CNN.
+
+
+To train the model,  we need to run the following command in our terminal in the project folder.
 
 ```
 
-$ python3 code/faster_rcnn/faster_rcnn.py -dataset "dataset A"
+$ python3 code/faster_rcnn/faster_rcnn.py
+
 
 ```
+
+
+This command will not work. We need to indicate which dataset we want to use and the folder's name to store the trained models. We can register these elements with the commands "-dataset" and "-model_output". If our dataset name is "dataset A" and the folder's name where we want to store the model is "dataset A output", the new command will be as follows.
+
+
+```
+
+$ python3 code/faster_rcnn/faster_rcnn.py -dataset "dataset A" -model_output "dataset A output"
+
+```
+
+Now you should be able to train your model. Besides the "-dataset" and "-model_output" commands, there are multiple commands to customise your models. Some useful commands are "-model" which allows us to choose a feature extractor from the detectron2 model zoo and "-learning_rate" to select the learning rate.  The command "-number_classes" indicates to our model how many classes are in the dataset,  "-patience" shows how many iterations without improvement in the validation loss we allow, and "evaluation_period" which indicates how frequently we evaluate our models in the validation set.
+
+The following command trains a Faster RCNN in the "dataset A". The learning rate is 0.0002 and a patience of 20. A patience of 20 means that if the model does not improve in 20 validations checks, the training will stop.
+
+```
+
+$ python3 code/faster_rcnn/faster_rcnn.py -dataset "dataset A" -model_output "dataset A output" -learning_rate 0.0002 -patience 20
+
+```
+
+Once we finish with training, we can evaluate our model. The python file "testing_faster_rcnn.py" contains the code to test our models.  To do so,  we only need to run this file with the corresponding commands "-model" and "-model_output". The testing uses the model located in the "model_output". We will need to use the "model_output" we indicated during the training process. The following command tests the models that we trained before.
+
+```
+
+$ python3 code/faster_rcnn/testing_faster_rcnn.py -dataset "dataset A" -model_output "dataset A output" 
+
+```
+
+
+We also included an approach to choose the anchor size in the faster R-CNN region proposal network. The code clusters the bounding boxes sizes of the dataset to propose the anchor sizes. We can use the commands "-anchor_size" and "-aspect_ratios" to set the anchor size during training. I will explain more about his process in following updates of this page.
+
+To do:
+
+<ul>
+ <li>Indicate how to use the file "decision_anchors.py"  to recommend rpn anchors.</li>
+ <li>Explain all the parameter we can use during training and testing.</li>
+</ul>
