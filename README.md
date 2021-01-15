@@ -22,35 +22,38 @@ First, you need to follow the given directory structure. You can always change t
 
 
 ```
+
 project
 │   README.md    
 │
-└───code   
+└───code                                          #Folder where we store the code.
 │   │   ...
 │   └───faster_rcnn
-│       │   faster_rcnn.py                        #faster rcnn training code
-│       │   testing_faster_rcnn.py                #faster rcnn testing code
+│       │   faster_rcnn.py                        #faster rcnn training code.
+│       │   testing_faster_rcnn.py                #faster rcnn testing code.
 |       └───tools
-|           |   decision_anchors.py               #K-means approach to choose anchor sizes
-|           |   plot_results_faster_rcnn.py       #
+|           |   decision_anchors.py               #K-means approach to choose anchor sizes.
+|           |   plot_results_faster_rcnn.py       #Plot the results of the trained models.
 │   
-└───datasets
+└───datasets                                      #Folder where we save the datasets.
 |   │   ...
-|   └───dataset_A
-|       |   json_test_set.json
-|       |   json_train_set.json
-|       |   json_val_set.json
-|       └───all
+|   └───dataset_A                                 #Dataset folder. Each dataset has to have a folder.
+|       |   json_test_set.json                    #COCO JSON annotation file of the testing images.
+|       |   json_train_set.json                   #COCO JSON annotation file of the training images.
+|       |   json_val_set.json                     #COCO JSON annotation file of the validation images.
+|       └───all                                   #Folder where we place the images.
 |           | img_1.png
 |           | img_2.png
 |           | ...
 |   
-└───saved_models
+└───saved_models                                  #Folder where we save the models.
 |   |   ...
-|   └───faster_cnn
+|   └───faster_cnn                                
 |       |   ...
-|       └───dataset_A
-|       
+|       └───dataset_A                             #Folder where we save the models we trained using dataset A.
+|           └───best_model.pth                    #Model we get from training.
+|    
+
 ```
 
 
@@ -80,7 +83,7 @@ $ python3 code/faster_rcnn/faster_rcnn.py -dataset "dataset A" -model_output "da
 
 ```
 
-Now you should be able to train your model. Besides the "-dataset" and "-model_output" commands, there are multiple commands to customise your models. Some useful commands are "-model" which allows us to choose a feature extractor from the detectron2 model zoo and "-learning_rate" to select the learning rate.  The command "-number_classes" indicates to our model how many classes are in the dataset,  "-patience" shows how many iterations without improvement in the validation loss we allow, and "evaluation_period" which indicates how frequently we evaluate our models in the validation set.
+Now, you should be able to train your model. Besides the "-dataset" and "-model_output" commands, there are multiple commands to customise your models. Some useful commands are "-model" which allows us to choose a feature extractor from the detectron2 model zoo and "-learning_rate" to select the learning rate.  The command "-number_classes" indicates to our model how many classes are in the dataset,  "-patience" shows how many iterations without improvement in the validation loss we allow, and "evaluation_period" which indicates how frequently we evaluate our models in the validation set.
 
 The following command trains a Faster RCNN in the "dataset A". The learning rate is 0.0002 and a patience of 20. A patience of 20 means that if the model does not improve in 20 validations checks, the training will stop.
 
@@ -94,7 +97,7 @@ Once we finish with training, we can evaluate our model. The python file "testin
 
 ```
 
-$ python3 code/faster_rcnn/testing_faster_rcnn.py -dataset "dataset A" -model_output "dataset A output" 
+$ python3 code/faster_rcnn/testing_faster_rcnn.py -dataset "dataset A" -model_output "dataset A output"
 
 ```
 
