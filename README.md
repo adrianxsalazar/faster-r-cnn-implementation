@@ -93,6 +93,7 @@ $ python3 code/faster_rcnn/faster_rcnn.py -dataset "dataset A" -model_output "da
 
 ```
 
+<h3> Testing the model </h3>
 Once we finish with training, we can evaluate our model. The python file "testing_faster_rcnn.py" contains the code to test our models.  To do so,  we only need to run this file with the corresponding commands "-model" and "-model_output". The testing uses the model located in the "model_output". We will need to use the "model_output" we indicated during the training process. The following command tests the models that we trained before.
 
 ```
@@ -104,9 +105,9 @@ $ python3 code/faster_rcnn/testing_faster_rcnn.py -dataset "dataset A" -model_ou
 
 We also included an approach to choose the anchor size in the faster R-CNN region proposal network. The code clusters the bounding boxes sizes of the dataset to propose the anchor sizes. We can use the commands "-anchor_size" and "-aspect_ratios" to set the anchor size during training. I will explain more about his process in following updates of this page.
 
-To do:
+<h3> Training parameters </h3>
 
-<ul>
- <li>Indicate how to use the file "decision_anchors.py"  to recommend rpn anchors.</li>
- <li>Explain all the parameter we can use during training and testing.</li>
-</ul>
+
+
+
+<h3> Choose the anchor size with k-means </h3>
