@@ -17,6 +17,7 @@ What can you do with this implementation?
 
 Before explaining how to use this implementation, I should point to the detectron2 framework. Detectron2 is a fantastic tool for object detection and segmentation.  You can get more information about this framework in the official <a href="https://github.com/facebookresearch/detectron2">repository.</a> If you want to know more about faster R-CNN, I recommend to start with the original article: "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks".
 
+<h2> Directory structure 2</h2>
 
 First, you need to follow the given directory structure. You can always change the code if you do not want to follow this structure. I will explain later which lines of code you need to change.
 
@@ -52,7 +53,6 @@ project
         |   ...
         └───dataset_A                             #Folder where we save the models we trained using dataset A.
             └───best_model.pth                    #Model we get from training.
-
 
 ```
 
