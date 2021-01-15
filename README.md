@@ -9,10 +9,11 @@ This repository contains a Faster R-CNN implementation. This implementation uses
 
 
 What can you do with this implementation?
-⋅⋅* Train object detection models with your custom datasets.
-⋅⋅* Set up the characteristic of the model with few commands. We cover elements such as the rpn anchor size, stopping criteria, base-model used for training, etc.
-⋅⋅* Test your model with just a few commands.
-
+<ul>
+ <li>Train object detection models with your custom datasets.</li>
+ <li>Set up the characteristic of the model with few commands. We cover elements such as the rpn anchor size, stopping criteria, base-model used for training, etc.</li>
+ <li>Test your model with just a few commands.</li>
+</ul>
 
 Before explaining how to use this implementation, I should point to the detectron2 framework. Detectron2 is a fantastic tool for object detection and segmentation.  You can get more information about this framework in the official repository. If you want to know more about faster R-CNN, I recommend to start with the original article: "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks".
 
