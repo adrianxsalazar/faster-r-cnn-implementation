@@ -17,7 +17,7 @@ What can you do with this implementation?
 
 Before explaining how to use this implementation, I should point to the detectron2 framework. Detectron2 is a fantastic tool for object detection and segmentation.  You can get more information about this framework in the official <a href="https://github.com/facebookresearch/detectron2">repository.</a> If you want to know more about faster R-CNN, I recommend to start with the original article: "Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks".
 
-<h2> Directory structure 2</h2>
+<h3> Directory structure </h3>
 
 First, you need to follow the given directory structure. You can always change the code if you do not want to follow this structure. I will explain later which lines of code you need to change.
 
@@ -57,10 +57,10 @@ project
 ```
 
 
-Following this directory structure, running this faster r-cnn would be as eaFirst, you need to follow the given directory structure. You can always change the code if you do not want to follow this structure. I will explain later which lines of code you need to change.
+First, you need to follow the given directory structure. You can always change the code if you do not want to follow this structure. I will explain later which lines of code you need to change.
 
 
-
+<h3> Running the code </h3>
 Once you have this structure, place the training, testing, and validation coco JSON files in the datasets/<name_of_your_dataset>/ directory. Then you only have to rename them as "json_train_set.json", "json_test_set.json", and "json_val_set.json". Then, copy all the dataset images under the directory datasets/<name_of_your_dataset>/all/. Now, everything is ready to train our Faster R-CNN.
 
 
