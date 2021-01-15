@@ -47,12 +47,12 @@ project
 |           | ...
 |   
 └───saved_models                                  #Folder where we save the models.
-|   |   ...
-|   └───faster_cnn                                
-|       |   ...
-|       └───dataset_A                             #Folder where we save the models we trained using dataset A.
-|           └───best_model.pth                    #Model we get from training.
-|    
+    |   ...
+    └───faster_cnn                                
+        |   ...
+        └───dataset_A                             #Folder where we save the models we trained using dataset A.
+            └───best_model.pth                    #Model we get from training.
+
 
 ```
 
