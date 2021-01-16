@@ -104,6 +104,24 @@ $ python3 code/faster_rcnn/testing_faster_rcnn.py -dataset "dataset A" -model_ou
 
 We also included an approach to choose the anchor size in the faster R-CNN region proposal network. The code clusters the bounding boxes sizes of the dataset to propose the anchor sizes. We can use the commands "-anchor_size" and "-aspect_ratios" to set the anchor size during training. I will explain more about his process in following updates of this page.
 
+The testing process outputs two files "counting_results.txt" and "detection_results.txt", which will be available in the output folder. The
+
+```
+
+project
+│    
+└───saved_models                                  #Folder where we save the models.
+    |   ...
+    └───faster_cnn                                
+        |   ...
+        └───dataset_A                             #Folder where we save the models we trained using dataset A.
+            └───results_folder
+                |   counting_restults.txt         #Folder that contains the counting measures of our model such as MAE and RMSE
+                |   detection_restults.txt        #Folder that contains the detection measures such as MaP
+
+
+```
+
 <h3> Training parameters </h3>
 
 ```
