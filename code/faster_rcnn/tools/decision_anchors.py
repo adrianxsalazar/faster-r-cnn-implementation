@@ -439,7 +439,7 @@ def main(json_name,dataset_path,number_clusters):
 if __name__ == '__main__' :
     parser = argparse.ArgumentParser(description = 'introduce dataset folder')
 
-    parser.add_argument('-json_name', metavar='json_path', required=True,
+    parser.add_argument('-json_name', metavar='json_name', required=True,
     type=str)
 
     parser.add_argument('-dataset_path', metavar='dataset_name', required=True,

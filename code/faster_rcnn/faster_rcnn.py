@@ -411,10 +411,10 @@ if __name__ == '__main__' :
     required=False, default=False, type=bool)
 
     parser.add_argument('-model_output', metavar='where the model is gonna be stored',
-    required=False, default="RiseholmeSingle130_strawberries", type=str)
+    required=False, default="Dataset_A", type=str)
 
     parser.add_argument('-dataset', metavar='dataset to use', required=False,
-    default='RiseholmeSingle130_strawberries', type=str)
+    default='Dataset_A', type=str)
 
     parser.add_argument('-standard_anchors', metavar='standard_anchors', required=False,
     default=True, type=bool)

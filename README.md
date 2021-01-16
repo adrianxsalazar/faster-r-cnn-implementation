@@ -172,5 +172,13 @@ project
 ```
 
 
-
 <h3> Choose the anchor size with k-means </h3>
+We set up a command to choose the anchor size in the region proposal network. However, it might difficult to select the right size to improve your detection models. An approach to get the right anchor size is to cluster the bounding boxes of our dataset. Then we can find representative groups of bounding box sizes. We can use the representative centroids of the clustering process as the anchors in the rpm. The Yolo V2 paper proposed this method that led to improvements in the Yolo performance. Now, we can implement this in our faster R-CNNs.
+
+To obtain the centroids, we need to run the following command. The parameter "-json_name" needs the name of the COCO JSON with the dataset labels. The "-dataset_path" command requires the path of the COCO JSON.  We can indicate the number of clusters with the attribute "-number_clusters".
+
+```
+
+$ python3 code/faster_rcnn/tools/decision_anchors.py -json_name "json_train_set.json" -dataset_path "./datasets/dataset A/" -number_cluster 9
+
+```
