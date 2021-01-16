@@ -105,6 +105,7 @@ $ python3 code/faster_rcnn/testing_faster_rcnn.py -dataset "dataset A" -model_ou
 We also included an approach to choose the anchor size in the faster R-CNN region proposal network. The code clusters the bounding boxes sizes of the dataset to propose the anchor sizes. We can use the commands "-anchor_size" and "-aspect_ratios" to set the anchor size during training. I will explain more about his process in following updates of this page.
 
 <h3> Training parameters </h3>
+
 ```
 
 -> -model: description=standard model used for training,
